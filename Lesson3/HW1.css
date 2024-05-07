@@ -13,3 +13,16 @@
 #task2{
     background-color: #8e9bfa;
 }
+.product-card{
+    height: 300px;
+    width: 300px;
+    background-color: #e1d27f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.product-image{
+    height: 200px;
+    width: 200px;
+}

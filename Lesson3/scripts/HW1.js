@@ -33,7 +33,9 @@ while( b < 20){
 Масив:*/
 
     let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-
+    for (const item of listOfItems){
+        document.write(`<ul><li>${item}</li></ul>`);
+    }
 /*
 ШАБЛОН:
     <ul>
@@ -52,7 +54,7 @@ while( b < 20){
 
     Використовуючи данні з масиву, за допомоги document.write та циклу
 побудувати структуру по шаблону
-Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
+Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон*/
 
 let products = [
     {
@@ -77,17 +79,22 @@ let products = [
     },
 ];
 
-ШАБЛОН
+for (const product of products){
+    document.write(`<div class="product-card">
+<h3 class="productTitle">Title ${product.title}. Price ${product.price}</h3>
+<img src=${product.image} alt="produccts" class="product-image"></div>`);
+}
+/*ШАБЛОН
 <div class="product-card">
     <h3 class="product-title">TITLE. Price - PRICE</h3>
 <img src="IMAGE" alt="" class="product-image">
 </div>
+
 Замість TITLE PRICE IMAGE - підставити відповідні поля з об'єкту
 
 
-
 --------------------
-    є масив
+    є масив*/
 let users = [
     {name: 'vasya', age: 31, status: false},
     {name: 'petya', age: 30, status: true},
@@ -101,6 +108,8 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
+
+/*
 за допомоги циклу вивести:
     - користувачів зі статусом true
 - користувачів зі статусом false
