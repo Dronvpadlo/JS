@@ -1,0 +1,15 @@
+#task1, #task2{
+    width: 80px;
+    height: 40px;
+
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#task1{
+    background-color: #9ce093;
+}
+#task2{
+    background-color: #8e9bfa;
+}
