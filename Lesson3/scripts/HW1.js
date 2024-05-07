@@ -81,7 +81,7 @@ let products = [
 
 for (const product of products){
     document.write(`<div class="product-card">
-<h3 class="productTitle">Title ${product.title}. Price ${product.price}</h3>
+<h3 class="product-title">Title ${product.title}. Price ${product.price}</h3>
 <img src=${product.image} alt="produccts" class="product-image"></div>`);
 }
 /*ШАБЛОН
