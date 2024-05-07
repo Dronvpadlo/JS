@@ -108,7 +108,21 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
-
+for (const user of users){
+    if (user.status === true){
+        document.write(`<p>name: ${user.name} true</p>`)
+    }
+}
+for (const user of users){
+    if (user.status === false){
+        document.write(`<p>name: ${user.name} false</p>`)
+    }
+}
+for (const user of users){
+    if (user.age > 30){
+        document.write(`<p>${user.name} have more tham 30 years</p>`)
+    }
+}
 /*
 за допомоги циклу вивести:
     - користувачів зі статусом true
