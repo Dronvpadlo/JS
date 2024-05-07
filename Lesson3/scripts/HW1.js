@@ -110,12 +110,12 @@ let users = [
 ];
 for (const user of users){
     if (user.status === true){
-        document.write(`<p>name: ${user.name} true</p>`)
+        document.write(`<p>${user.name} have status: true</p>`)
     }
 }
 for (const user of users){
     if (user.status === false){
-        document.write(`<p>name: ${user.name} false</p>`)
+        document.write(`<p>${user.name} have status: false</p>`)
     }
 }
 for (const user of users){
