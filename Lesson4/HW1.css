@@ -1,0 +1,31 @@
+.user{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+.id{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: #9861dc;
+}
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 180px;
+    background-color: #eae688;
+}
+.age{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: #809dd3;
+}
