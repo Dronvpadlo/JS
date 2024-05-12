@@ -66,14 +66,15 @@ document.write(`</ul>`);
 
 
 /*- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)*/
-document.write(`<ul>`)
-for (let i = 0; i < 3; i++){
-    function li2(a2){
+function li2(a2) {
+    document.write(`<ul>`);
+    for (let i = 0; i < numberList; i++) {
         document.write(`<li>${a2}</li>`);
     }
-    li2('item2');
+    document.write(`</ul>`);
 }
-document.write(`</ul>`);
+const numberList = 4;
+li2('item2');
 
 
 
@@ -116,6 +117,26 @@ let users = [
     {id: 11, name: 'max', age: 31, status: true}];
 
 loop3 (users);
+
+//- створити функцію яка повертає найменьше число з масиву
+
+function minArr (arr) {
+    let min = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+
+}
+const arrNum = [91,12,19];
+document.write(minArr(arrNum));
+document.write(`<br>`);
+
+
 /*- створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13*/
 const sum = [1,2,10,22,2,23];
     function sumArr(){
@@ -143,15 +164,14 @@ document.write(`<br>`);
 
 /*- Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250*/
-function exchange(sumUa, USDCurrency, EURCurrency){
-    if (sumUa > 0 && USDCurrency > 0 && EURCurrency > 0) {
-        let sumUsd = sumUa / USDCurrency;
-        let sumEur= sumUa / EURCurrency;
-        document.write(`${sumUa} UAN can be exchanged for ${sumUsd} USD in value ${USDCurrency.toFixed(2)} or ${sumEur.toFixed(2)} EUR in value ${EURCurrency}</br>`);
+function exchange(sumUAN, currencyValues, exchangeCurrency){
+    for (let item of currencyValues) {
+        if (exchangeCurrency === item.currency){
+            resultValue = sumUAN / item.value;
+        }
+
     }
-    else{
-        document.write(`uncorrect</br>`);
-    }
+    document.write(resultValue)
 }
-exchange(100000, 40, 42);
-exchange(420, 40, 42);
+
+exchange (10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD');
