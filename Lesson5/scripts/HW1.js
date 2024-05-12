@@ -182,9 +182,8 @@ exchange = (sumUAN, currencyValues, exchangeCurrency) => {
         if (exchangeCurrency === item.currency){
             resultValue = sumUAN / item.value;
         }
-
     }
-    document.write(resultValue)
+    document.write(resultValue);
 }
 
 exchange (10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD');
