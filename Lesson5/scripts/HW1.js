@@ -10,7 +10,7 @@ areasq = (a, b) => {
         document.write(`uncorrect</br>`);
     }
 }
-areasq(5, 8);
+areasq(9, 8);
 
 
 
@@ -24,7 +24,7 @@ areacircle = (p, r) => {
         document.write(`uncorrect</br>`);
     }
 }
-areacircle(3.14, 5);
+areacircle(3.14, 8);
 
 
 
@@ -38,7 +38,7 @@ areacylind = (p, r, h) => {
         document.write(`uncorrect</br>`);
     }
 }
-areacylind(3.14, 6, 9);
+areacylind(3.14, 4, 7);
 
 
 
@@ -48,7 +48,7 @@ loop = (array1) => {
         document.write(`${item}, `);
     }
 }
-let array1 = [12, 'task4', 442, false];
+let array1 = [12, 'task5', 44, false, 27];
 
 loop(array1);
 
@@ -57,8 +57,8 @@ loop(array1);
 p = (a) => {
     document.write(`<p>${a}</p>`);
 }
-p('<p>forExample</p>');
-p('<p>forExample</p>');
+p('<p>Example</p>');
+p('<p>Example number 2</p>');
 
 
 
@@ -67,9 +67,9 @@ document.write(`<ul>`)
 li1 = (a1) => {
     document.write(`<li>${a1}</li>`);
 }
-li1('item');
-li1('item');
-li1('item');
+li1('item1');
+li1('item1');
+li1('item1');
 document.write(`</ul>`);
 
 
@@ -143,12 +143,12 @@ minArr = (arr) => {
         return min;
 
 }
-const arrNum = [91,12,9];
+const arrNum = [91,12,6,27,34,2];
 document.write(minArr(arrNum));
 document.write(`<br>`);
 
 //- створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
-const sum = [1,2,10,22,2,23];
+const sum = [1,2,10,2,2,15];
 sumArr = () => {
     let summ = 0;
     for (let elem of sum) {
@@ -170,21 +170,21 @@ swap = (arr, index1, index2) => {
     arr[index2] = indexRes;
     return arr
 }
-document.write(swap(numbers, 0,1));
+document.write(swap(numbers, 0,3));
 document.write(`<br>`);
 
 
 /*- Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250*/
-exchange=(sumUa, USDCurrency, EURCurrency) => {
-    if (sumUa > 0 && USDCurrency > 0 && EURCurrency > 0) {
-        let sumUsd = sumUa / USDCurrency;
-        let sumEur= sumUa / EURCurrency;
-        document.write(`${sumUa} UAN can be exchanged for ${sumUsd} USD in value ${USDCurrency.toFixed(2)} or ${sumEur.toFixed(2)} EUR in value ${EURCurrency}</br>`);
+
+exchange = (sumUAN, currencyValues, exchangeCurrency) => {
+    for (let item of currencyValues) {
+        if (exchangeCurrency === item.currency){
+            resultValue = sumUAN / item.value;
+        }
+
     }
-    else{
-        document.write(`uncorrect</br>`);
-    }
+    document.write(resultValue)
 }
-exchange(100000, 40, 42);
-exchange(420, 40, 42);
+
+exchange (10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD');

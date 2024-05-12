@@ -11,7 +11,7 @@
     align-items: center;
     height: 100px;
     width: 100px;
-    background-color: #9861dc;
+    background-color: #93ee8b;
 }
 .name{
     display: flex;
@@ -19,7 +19,7 @@
     align-items: center;
     height: 100px;
     width: 180px;
-    background-color: #eae688;
+    background-color: #e79ea7;
 }
 .age{
     display: flex;
@@ -27,5 +27,5 @@
     align-items: center;
     height: 100px;
     width: 100px;
-    background-color: #809dd3;
+    background-color: #e8a3dc;
 }
