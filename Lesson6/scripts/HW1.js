@@ -167,6 +167,7 @@ let cards = [
     {cardSuit: 'heart', value: 'queen',color:'red'},
     {cardSuit: 'heart', value: 'king',color:'red'},
 ];
+
 console.log(cards);
 
 //- знайти піковий туз
