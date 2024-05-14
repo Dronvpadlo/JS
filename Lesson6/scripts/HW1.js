@@ -71,6 +71,9 @@ sortNums = (nums, direction)=>{
 
 sortNums(nums,'ascending');
 sortNums(nums,'descending');
+
+
+
 //==========================
 // 8. - є масив
 let coursesAndDurationArray = [
@@ -229,11 +232,8 @@ console.log(reduce);
 
 
 //=========================
-/*  11.  взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
---написати пошук всіх об'єктів, в який в modules є sass
---написати пошук всіх об'єктів, в який в modules є docker*/
-
-/*let coursesArray = [
+/*  11.  взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray*/
+let coursesArray = [
     {
         title: 'JavaScript Complex',
         monthDuration: 5,
@@ -270,4 +270,22 @@ console.log(reduce);
         hourDuration: 909,
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
-];*/
+];
+
+//--написати пошук всіх об'єктів, в який в modules є sass
+let sassFinder = coursesArray.filter(module => {
+    module.modules.filter(direction => {
+    if (direction === 'sass'){
+        console.log(module);
+    }
+    })
+});
+console.log('_________________________________________________________');
+//--написати пошук всіх об'єктів, в який в modules є docker
+let dockerFinder = coursesArray.filter(module => {
+    module.modules.filter(direction => {
+        if (direction === 'docker'){
+            console.log(module);
+        }
+    })
+});
