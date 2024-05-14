@@ -52,7 +52,7 @@ let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', '
 // 6. - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
 let numberArr = [10,8,-7,55,987,-1011,0,1050,0]
     let map = numberArr.map(index =>{return index = index.toString()});
-    console.log(map)
+    console.log(map);
 
 
 /* 7. - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
@@ -62,7 +62,7 @@ sortNums(nums,'descending') // [21,11,3]*/
 let nums = [11, 21 ,3];
 sortNums = (nums, direction)=>{
     if (direction ==='ascending'){
-        nums.sort((index1, index2) => index1 - index2);}
+        nums.sort((index1, index2) => index1 - index2)}
     if (direction ==='descending'){
         nums.sort((index1, index2) => index2 - index1);
     }
@@ -83,19 +83,20 @@ let coursesAndDurationArray = [
 ];
 //-- відсортувати його за спаданням за monthDuration
 coursesAndDurationArray.sort((direction1, direction2) => direction2.monthDuration - direction1.monthDuration);
-console.log(coursesAndDurationArray)
+console.log(coursesAndDurationArray);
 
 
 //-- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
     let filterDuration = coursesAndDurationArray.filter(objOfArr => {
-        return objOfArr.monthDuration > 5
+        return objOfArr.monthDuration > 5;
 });
     console.log(filterDuration);
 
 
 //-- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration} */
-    let coursesAndDurationArrNew= coursesAndDurationArray.map((direction, index) =>{({id: index + 1,...direction})
-        let newDirection = {id: index + 1,...direction}
+    let coursesAndDurationArrNew= coursesAndDurationArray.map((direction, index) =>
+    {({id: index + 1,...direction});
+        let newDirection = {id: index + 1,...direction};
 
        return newDirection;
     })
@@ -142,7 +143,7 @@ let cards = [
     {cardSuit: 'heart', value: 'queen',color:'red'},
     {cardSuit: 'heart', value: 'king',color:'red'},
 ]
-console.log(cards)
+console.log(cards);
 
 //- знайти піковий туз
 let spadeAce = cards.filter(cardOfArr => {
