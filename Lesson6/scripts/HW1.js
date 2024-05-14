@@ -60,7 +60,7 @@ let numberArr = [10,8,-7,55,987,-1011,0,1050,0]
 sortNums(nums,'ascending') // [3,11,21]
 sortNums(nums,'descending') // [21,11,3]*/
 let nums = [11, 21 ,3];
-function sortNums (nums, direction) {
+sortNums = (nums, direction)=>{
     if (direction ==='ascending'){
         nums.sort((index1, index2) => index1 - index2);}
     if (direction ==='descending'){
@@ -103,14 +103,91 @@ console.log(coursesAndDurationArray)
 
 
 //=========================
-/* 9.  описати колоду карт (від 6 до туза без джокерів)
-- знайти піковий туз
-- всі шістки
-- всі червоні карти
-- всі буби
-- всі трефи від 9 та більше
+// 9.  описати колоду карт (від 6 до туза без джокерів)
+let cards = [
+    {cardSuit: 'spade', value: '6',color:'black'},
+    {cardSuit: 'spade', value: '7',color:'black'},
+    {cardSuit: 'spade', value: '8',color:'black'},
+    {cardSuit: 'spade', value: '9',color:'black'},
+    {cardSuit: 'spade', value: '10',color:'black'},
+    {cardSuit: 'spade', value: 'ace',color:'black'},
+    {cardSuit: 'spade', value: 'jack',color:'black'},
+    {cardSuit: 'spade', value: 'queen',color:'black'},
+    {cardSuit: 'spade', value: 'king',color:'black'},
+    {cardSuit: 'clubs', value: '6',color:'black'},
+    {cardSuit: 'clubs', value: '7',color:'black'},
+    {cardSuit: 'clubs', value: '8',color:'black'},
+    {cardSuit: 'clubs', value: '9',color:'black'},
+    {cardSuit: 'clubs', value: '10',color:'black'},
+    {cardSuit: 'clubs', value: 'ace',color:'black'},
+    {cardSuit: 'clubs', value: 'jack',color:'black'},
+    {cardSuit: 'clubs', value: 'queen',color:'black'},
+    {cardSuit: 'clubs', value: 'king',color:'black'},
+    {cardSuit: 'diamond', value: '6',color:'red'},
+    {cardSuit: 'diamond', value: '7',color:'red'},
+    {cardSuit: 'diamond', value: '8',color:'red'},
+    {cardSuit: 'diamond', value: '9',color:'red'},
+    {cardSuit: 'diamond', value: '10',color:'red'},
+    {cardSuit: 'diamond', value: 'ace',color:'red'},
+    {cardSuit: 'diamond', value: 'jack',color:'red'},
+    {cardSuit: 'diamond', value: 'queen',color:'red'},
+    {cardSuit: 'diamond', value: 'king',color:'red'},
+    {cardSuit: 'heart', value: '6',color:'red'},
+    {cardSuit: 'heart', value: '7',color:'red'},
+    {cardSuit: 'heart', value: '8',color:'red'},
+    {cardSuit: 'heart', value: '9',color:'red'},
+    {cardSuit: 'heart', value: '10',color:'red'},
+    {cardSuit: 'heart', value: 'ace',color:'red'},
+    {cardSuit: 'heart', value: 'jack',color:'red'},
+    {cardSuit: 'heart', value: 'queen',color:'red'},
+    {cardSuit: 'heart', value: 'king',color:'red'},
+]
+console.log(cards)
 
-{
+//- знайти піковий туз
+let spadeAce = cards.filter(cardOfArr => {
+    if (cardOfArr.cardSuit ==='spade' && cardOfArr.value === 'ace'){
+        console.log(cardOfArr);
+    }
+});
+console.log('_________________________________________________________');
+
+//- всі шістки
+
+let sixthCards = cards.filter(cardOfArr => {
+    if (cardOfArr.value ==='6'){
+        console.log(cardOfArr);
+    }
+});
+console.log('_________________________________________________________');
+
+//- всі червоні карти
+let redCards = cards.filter(cardOfArr => {
+    if (cardOfArr.color ==='red'){
+        console.log(cardOfArr);
+    }
+});
+console.log('_________________________________________________________');
+
+//- всі буби
+
+let diamondsCards = cards.filter(cardOfArr => {
+    if (cardOfArr.cardSuit ==='diamond'){
+        console.log(cardOfArr);
+    }
+});
+console.log('_________________________________________________________');
+//- всі трефи від 9 та більше
+
+let moreThanEightClubs = cards.filter(cardOfArr => {
+    if (cardOfArr.cardSuit ==='clubs' && cardOfArr.value !='6' && cardOfArr.value !='7' && cardOfArr.value !='8'){
+        console.log(cardOfArr);
+    }
+});
+console.log('_________________________________________________________');
+
+
+/*{
     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
     color:'', // 'red','black'
@@ -121,8 +198,26 @@ console.log(coursesAndDurationArray)
 
 //=========================
 
-/*  10.  Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
-{
+//  10.  Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
+const callback = function (accumulator, card) {
+    if (card.cardSuit === 'spade'){
+        accumulator[0].push(card);
+    }
+    if (card.cardSuit === 'diamond'){
+        accumulator[1].push(card);
+    }
+    if (card.cardSuit === 'heart'){
+        accumulator[2].push(card);
+    }
+    if (card.cardSuit === 'clubs'){
+        accumulator[3].push(card);
+    }
+    return accumulator
+};
+
+let reduce = cards.reduce(callback, [[],[],[],[]]);
+console.log(reduce);
+/*{
     spades:[],
         diamonds:[],
     hearts:[],
