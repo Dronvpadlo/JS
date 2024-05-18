@@ -90,7 +90,7 @@ function Car (model, made, year, maxSpeed, engineCapacity,) {
                 this.engineCapacity = engineCapacity;
                 cars.push(this);
                 this.greeting = function (speed){
-                        return `${speed} ${this.maxSpeed} km/h`
+                        return `${speed} ${this.maxSpeed} km/h on the ${this.made} ${this.model}`
                         }
                 this.info = function (){
                         console.log(`Model: ${this.model}, Made: ${this.made}, Year: ${this.year}, Max Speed: ${this.maxSpeed}, Engine Capacity: ${this.engineCapacity}`);
@@ -99,11 +99,11 @@ function Car (model, made, year, maxSpeed, engineCapacity,) {
                     if (newMaxSpeed > this.maxSpeed)
                     console.log(`New max speed: ${newMaxSpeed} of car ${this.made} ${this.model}`);
                     else{
-                        console.log(`speed remain ${maxSpeed}`)
+                        console.log(`speed remain ${maxSpeed} of car ${this.made} ${this.model}`)
                     }
                 }
                 this.changeYear = function setNewYear(newYear){
-                    console.log(`new year is ${newYear}`);
+                    console.log(`new year is ${newYear} of ${this.made} ${this.model}`);
                 }
                 this.addDriver = function newDriver (name, age, nation){
                     console.log(`new driver ${name}, ${age} years, from ${nation} start driving on a car ${this.made} ${this.model} ${this.year}`)
@@ -122,14 +122,20 @@ let newMaxSpeed = (23);
 //--3.2 drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
 console.log('3.2 drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`')
 console.log(car1.greeting('we drive with speed'));
+console.log(car2.greeting('we drive with speed'));
+console.log(car3.greeting('we drive with speed'));
 
 //--3.3 info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
 console.log('3.3 info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`')
+car1.info();
 car2.info();
+car3.info();
 
 
 //-3.4- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
-car3.increaseMaxSpeed(277)
+car1.increaseMaxSpeed(247)
+car2.increaseMaxSpeed(247)
+car3.increaseMaxSpeed(247)
 
 
 //--3.5 changeYear (newValue) - змінює рік випуску на значення newValue
@@ -137,17 +143,76 @@ car1.changeYear(2004)
 
 
 //--3.6 addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-car2.addDriver('Ken Block', 28, 'England');
+car1.addDriver('Ken Block', 56, 'American');
+car2.addDriver('Dave Mirra', 42, 'American');
+car3.addDriver('Jade Taylor', 38, 'American');
 
 
 /*-4.1 (Те саме, тільки через клас)
-Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
---4.2 drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
---4.3 info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
---4.4 increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
---4.5 changeYear (newValue) - змінює рік випуску на значення newValue
---4.6 addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car*/
+Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:*/
+console.log('4.1 (Те саме, тільки через клас)\n' +
+    'Створити клас який дозволяє створювати об\'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об\'єм двигуна. додати в об\'єкт функції:*/\n')
+class Car1 {
+    constructor(model, made, year, maxSpeed, engineCapacity,) {
 
+        this.model = model;
+        this.made = made;
+        this.year = year;
+        this.maxSpeed = maxSpeed;
+        this.engineCapacity = engineCapacity;
+
+        cars1.push(this);
+        this.greeting = function (speed) {
+            return `${speed} ${this.maxSpeed} km/h on the ${this.made} ${this.model}`
+        }
+        this.info = function () {
+            console.log(`Model: ${this.model}, Made: ${this.made}, Year: ${this.year}, Max Speed: ${this.maxSpeed}, Engine Capacity: ${this.engineCapacity}`);
+        }
+        this.increaseMaxSpeed = function newSpeed(newMaxSpeed) {
+            if (newMaxSpeed > this.maxSpeed)
+                console.log(`New max speed: ${newMaxSpeed} of car ${this.made} ${this.model}`);
+            else {
+                console.log(`speed remain ${maxSpeed}`)
+            }
+        }
+        this.changeYear = function setNewYear(newYear) {
+            console.log(`new year is ${newYear} of ${this.made} ${this.model}`);
+        }
+        this.addDriver = function newDriver(name, age, nation) {
+            console.log(`new driver ${name}, ${age} years, from ${nation} start driving on a car ${this.made} ${this.model} ${this.year}`)
+        }
+    }
+}
+
+let cars1 = []
+console.log(cars1)
+let car4 = new Car1 ('Agera', 'Koenigsegg', 2010, 433, 5 );
+let car5 = new Car1 ('Supra', 'Toyota', 2002, 266, 3 );
+//--4.2 drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+console.log('4.2 drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`')
+console.log(car4.greeting('we drive with speed'));
+console.log(car5.greeting('we drive with speed'));
+
+//--4.3 info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+console.log('4.3 info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`')
+car4.info();
+car5.info();
+
+
+//--4.4 increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+console.log('4.4 increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed')
+car4.increaseMaxSpeed(320);
+car5.increaseMaxSpeed(320);
+
+//--4.5 changeYear (newValue) - змінює рік випуску на значення newValue
+console.log('4.5 changeYear (newValue) - змінює рік випуску на значення newValue')
+car4.changeYear(2011);
+car5.changeYear(1998);
+
+//--4.6 addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car*/
+console.log('4.6 addDriver (driver) - приймає об\'єкт який "водій" з довільним набором полів, і додає його в поточний об\'єкт car')
+car4.addDriver('Trevis Pastrana', 32, 'American');
+car5.addDriver('Mohammed Ben Sulayem', 62, 'FIA');
 
 
 /*5-створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
