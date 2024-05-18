@@ -219,7 +219,34 @@ car5.addDriver('Mohammed Ben Sulayem', 62, 'FIA');
 Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку*/
+class Cinderella {
+    constructor(name, age, footSize) {
 
+        this.name = name;
+        this.age = age;
+        this.footSize = footSize;
+        cinderellas.push(this);
 
+        }
+    }
+let cinderellas=[];
+console.log(cinderellas);
+let cinderella1 = new Cinderella('Leyla', 32, 42);
+let cinderella2 = new Cinderella('Anet', 21, 41);
+let cinderella3 = new Cinderella('Jerry', 27, 42);
+let cinderella4 = new Cinderella('Abigale', 24, 40);
+let cinderella5 = new Cinderella('Molly', 37, 39);
+let cinderella6 = new Cinderella('Karen', 33, 39);
+let cinderella7 = new Cinderella('Fodoris', 21, 35);
+let cinderella8 = new Cinderella('Elizabet', 25, 36);
+let cinderella9 = new Cinderella('Nancy', 29, 38);
+let cinderella10 = new Cinderella('Ashley', 21, 37);
+
+let prince = {name: 'Mirliflor', age: 24, findingShoe: 35}
+for (const cindirellasElement of cinderellas) {
+    if ( cindirellasElement.footSize === prince.findingShoe){
+        console.log(cindirellasElement);
+    }
+}
 
 //6Через Array.prototype. створити власний foreach, filter, map
