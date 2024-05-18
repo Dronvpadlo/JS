@@ -29,7 +29,7 @@ let user10 = new User(10, 'Henry', 'Tomasino', 'mafiagangst2@imail.uk', '231-323
 
 
 console.log('1.2 Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об\'єкти з парними id (filter)');
-users.filter(user => {if (user.id % 2 == 0){console.log(user);}
+users.filter(user => {if (user.id % 2 === 0){console.log(user);}
 });
 
 
