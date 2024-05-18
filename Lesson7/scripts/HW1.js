@@ -226,9 +226,8 @@ class Cinderella {
         this.age = age;
         this.footSize = footSize;
         cinderellas.push(this);
-
-        }
     }
+}
 let cinderellas=[];
 console.log(cinderellas);
 let cinderella1 = new Cinderella('Leyla', 32, 42);
@@ -248,5 +247,4 @@ for (const cindirellasElement of cinderellas) {
         console.log(cindirellasElement);
     }
 }
-
 //6Через Array.prototype. створити власний foreach, filter, map
