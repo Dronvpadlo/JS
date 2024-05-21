@@ -10,22 +10,22 @@ function User (id, name, surname, email, phone) {
         this.surname = surname;
         this.email = email;
         this.phone = phone;
-        users.push(this);
+
 }
-let users = [];
+
+
+let users = [
+    new User(1, 'Arthyr', 'Morgan', 'mirg23@imail.uk' , '231-323-3242'),
+    new User(3, 'Nico', 'Bellic', 'bellicnic@imail.uk', '231-323-3048'),
+    new User(2, 'Martin', 'Eden', 'writertop3@imail.uk', '231-323-3114'),
+    new User(4, 'Godfried', 'Lens', 'lencegersold48@imail.uk', '231-323-3881'),
+    new User(7, 'Joseph', 'Gilgun', 'brassic24@imail.uk', '231-323-3007'),
+    new User(6, 'Clariss', 'Sratlink', 'detectivepriv@imail.uk', '231-323-3114'),
+    new User(5, 'Lilend', 'Gont', 'goofthings223@imail.uk', '231-323-3334'),
+    new User(8, 'Wolf', 'Larsen', 'seawolf1911@imail.uk', '231-323-3181'),
+    new User(9, 'Ludvig', 'Bodmer', 'berlinpoems2@imail.uk', '231-323-3098'),
+    new User(10, 'Henry', 'Tomasino', 'mafiagangst2@imail.uk', '231-323-3007')];
 console.log(users);
-
-let user1 = new User(1, 'Arthyr', 'Morgan', 'mirg23@imail.uk', '231-323-3242');
-let user2 = new User(3, 'Nico', 'Bellic', 'bellicnic@imail.uk', '231-323-3048');
-let user3 = new User(2, 'Martin', 'Eden', 'writertop3@imail.uk', '231-323-3114');
-let user4 = new User(4, 'Godfried', 'Lens', 'lencegersold48@imail.uk', '231-323-3881');
-let user5 = new User(7, 'Joseph', 'Gilgun', 'brassic24@imail.uk', '231-323-3007');
-let user6 = new User(6, 'Clariss', 'Sratlink', 'detectivepriv@imail.uk', '231-323-3114');
-let user7 = new User(5, 'Lilend', 'Gont', 'goofthings223@imail.uk', '231-323-3334');
-let user8 = new User(8, 'Wolf', 'Larsen', 'seawolf1911@imail.uk', '231-323-3181');
-let user9 = new User(9, 'Ludvig', 'Bodmer', 'berlinpoems2@imail.uk', '231-323-3098');
-let user10 = new User(10, 'Henry', 'Tomasino', 'mafiagangst2@imail.uk', '231-323-3007');
-
 
 
 console.log('1.2 Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об\'єкти з парними id (filter)');
@@ -37,7 +37,7 @@ users.filter(user => {if (user.id % 2 === 0){console.log(user);}
 console.log('1.3 Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)');
 let sortUsers = users.sort((id1, id2) => id1.id - id2.id);
 console.log(sortUsers);
-
+console.log('________________________________________________')
 
 
 /*-2.1 створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
@@ -52,32 +52,32 @@ class Client{
                 this.email = email;
                 this.phone = phone;
                 this.order = order;
-                clients.push(this);
 
         }
 
 }
-let clients = [];
+
+
+
+let clients = [
+    new Client(1, 'Arthyr', 'Morgan', 'mirg23@imail.uk', '231-323-3242',['burbon', 'krekers', 'cigarettes'] ),
+    new Client(3, 'Nico', 'Bellic', 'bellicnic@imail.uk', '231-323-3048', ['juice', 'glasses']),
+    new Client(2, 'Martin', 'Eden', 'writertop3@imail.uk', '231-323-3114', ['tomato', 'pen', 'notes', 'newspaper', 'bread']),
+    new Client(4, 'Godfried', 'Lens', 'lencegersold48@imail.uk', '231-323-3881', ['rum', 'beef meat', 'bread']),
+    new Client(7, 'Joseph', 'Gilgun', 'brassic24@imail.uk', '231-323-3007', ['beer', 'car toy', 'cigarettes']),
+    new Client(6, 'Clariss', 'Sratlink', 'detectivepriv@imail.uk', '231-323-3114', ['schampoo', 'beer']),
+    new Client(5, 'Lilend', 'Gont', 'goofthings223@imail.uk', '231-323-3334', ['magazine']),
+    new Client(8, 'Wolf', 'Larsen', 'seawolf1911@imail.uk', '231-323-3181', ['whiskey', 'spaghetti']),
+    new Client(9, 'Ludvig', 'Bodmer', 'berlinpoems2@imail.uk', '231-323-3098', ['rum', 'magazine', 'suit']),
+    new Client(10, 'Henry', 'Tomasino', 'mafiagangst2@imail.uk', '231-323-3007', ['cigarettes']),];
 console.log(clients);
-
-let client1 = new Client(1, 'Arthyr', 'Morgan', 'mirg23@imail.uk', '231-323-3242',['burbon', 'krekers', 'cigarettes'] );
-let client2 = new Client(3, 'Nico', 'Bellic', 'bellicnic@imail.uk', '231-323-3048', ['juice', 'glasses']);
-let client3 = new Client(2, 'Martin', 'Eden', 'writertop3@imail.uk', '231-323-3114', ['tomato', 'pen', 'notes', 'newspaper', 'bread']);
-let client4 = new Client(4, 'Godfried', 'Lens', 'lencegersold48@imail.uk', '231-323-3881', ['rum', 'beef meat', 'bread']);
-let client5 = new Client(7, 'Joseph', 'Gilgun', 'brassic24@imail.uk', '231-323-3007', ['beer', 'car toy', 'cigarettes']);
-let client6 = new Client(6, 'Clariss', 'Sratlink', 'detectivepriv@imail.uk', '231-323-3114', ['schampoo', 'beer']);
-let client7 = new Client(5, 'Lilend', 'Gont', 'goofthings223@imail.uk', '231-323-3334', ['magazine']);
-let client8 = new Client(8, 'Wolf', 'Larsen', 'seawolf1911@imail.uk', '231-323-3181', ['whiskey', 'spaghetti']);
-let client9 = new Client(9, 'Ludvig', 'Bodmer', 'berlinpoems2@imail.uk', '231-323-3098', ['rum', 'magazine', 'suit']);
-let client10 = new Client(10, 'Henry', 'Tomasino', 'mafiagangst2@imail.uk', '231-323-3007', ['cigarettes']);
-
 
 
 //-2.2 Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
 console.log('2.2 Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)');
 let sortClients = clients.sort((order1, order2) => order1.order.length - order2.order.length);
 console.log(sortClients);
-
+console.log('________________________________________________')
 
 
 //-3.1 Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
@@ -88,7 +88,6 @@ function Car (model, made, year, maxSpeed, engineCapacity,) {
                 this.year = year;
                 this.maxSpeed = maxSpeed;
                 this.engineCapacity = engineCapacity;
-                cars.push(this);
                 this.greeting = function (speed){
                         return `${speed} ${this.maxSpeed} km/h on the ${this.made} ${this.model}`
                         }
@@ -146,7 +145,7 @@ car1.changeYear(2004)
 car1.addDriver('Ken Block', 56, 'American');
 car2.addDriver('Dave Mirra', 42, 'American');
 car3.addDriver('Jade Taylor', 38, 'American');
-
+console.log('________________________________________________')
 
 /*-4.1 (Те саме, тільки через клас)
 Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:*/
@@ -213,38 +212,109 @@ car5.changeYear(1998);
 console.log('4.6 addDriver (driver) - приймає об\'єкт який "водій" з довільним набором полів, і додає його в поточний об\'єкт car')
 car4.addDriver('Trevis Pastrana', 32, 'American');
 car5.addDriver('Mohammed Ben Sulayem', 62, 'FIA');
+console.log('________________________________________________')
 
 
 /*5-створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
 Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку*/
+console.log('5-створити класс/функцію конструктор попелюшка з полями ім\'я, вік, розмір ноги. Створити масив з 10 попелюшок.\n' +
+    'Сторити об\'єкт класу "принц" за допомоги класу який має поля ім\'я, вік, туфелька яку він знайшов.\n' +
+    '    За допомоги циклу знайти яка попелюшка повинна бути з принцом.')
 class Cinderella {
     constructor(name, age, footSize) {
 
         this.name = name;
         this.age = age;
         this.footSize = footSize;
-        cinderellas.push(this);
     }
 }
-let cinderellas=[];
-console.log(cinderellas);
-let cinderella1 = new Cinderella('Leyla', 32, 42);
-let cinderella2 = new Cinderella('Anet', 21, 41);
-let cinderella3 = new Cinderella('Jerry', 27, 42);
-let cinderella4 = new Cinderella('Abigale', 24, 40);
-let cinderella5 = new Cinderella('Molly', 37, 39);
-let cinderella6 = new Cinderella('Karen', 33, 39);
-let cinderella7 = new Cinderella('Fodoris', 21, 35);
-let cinderella8 = new Cinderella('Elizabet', 25, 36);
-let cinderella9 = new Cinderella('Nancy', 29, 38);
-let cinderella10 = new Cinderella('Ashley', 21, 37);
 
-let prince = {name: 'Mirliflor', age: 24, findingShoe: 35}
+let cinderellas = [new Cinderella('Leyla', 32, 42),
+    new Cinderella('Anet', 21, 41),
+    new Cinderella('Jerry', 27, 42),
+    new Cinderella('Abigale', 24, 40),
+    new Cinderella('Molly', 37, 39),
+    new Cinderella('Karen', 33, 39),
+    new Cinderella('Fodoris', 21, 35),
+    new Cinderella('Elizabet', 25, 36),
+    new Cinderella('Nancy', 29, 38),
+    new Cinderella('Ashley', 21, 37)]
+class Prince {
+    constructor(name, age, findingShoe) {
+
+        this.name = name;
+        this.age = age;
+        this.findingShoe = findingShoe;
+    }
+}
+
+let prince = new Prince('Mirliflor', 24,350)
 for (const cindirellasElement of cinderellas) {
     if ( cindirellasElement.footSize === prince.findingShoe){
         console.log(cindirellasElement);
     }
 }
-//6Через Array.prototype. створити власний foreach, filter, map
+console.log('________________________________________________')
+console.log('Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку*/')
+Cinderella.prototype.find = function (callback){
+    for (const footSize in cinderellas) {
+        if (footSize === callback){
+            console.log(footSize);
+        }
+        else{
+            console.log('error');
+        }
+    }
+}
+const findCindirella = cinderellas.find (cinderella => cinderellas.footSize === prince.findingShoe);
+    if (findCindirella){
+        console.log('Cindirella is', cinderellas.name)
+    }
+    else{
+        console.log('cinderella is not found')
+    }
+
+
+console.log('________________________________________________')
+
+
+
+
+//6Через Array.prototype. створити власний foreach, , map
+console.log('Через Array.prototype. створити власний foreach:');
+Car.prototype.carForEach = function (callback){
+    for (const item in this) {
+        if (typeof this[item] === 'function') continue;
+        callback(item)
+    }
+}
+car1.carForEach(item => console.log(item));
+
+
+
+console.log('Через Array.prototype. створити власний filter:');
+Car.prototype.filter = function (callback){
+    if (this.model === 'RX-7') {
+        callback(this.made + ' ' + this.model);
+    }
+    else {
+        callback('error');
+    }
+
+}
+car2.filter(el => console.log(el));
+car3.filter(el => console.log(el));
+
+
+
+console.log('Через Array.prototype. створити власний map:');
+Car.prototype.map = function (callback){
+        callback(this)
+}
+car2.map(el => console.log(el));
+
+
+
+
