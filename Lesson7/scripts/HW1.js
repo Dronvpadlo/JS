@@ -121,7 +121,7 @@ let newMaxSpeed = (23);
 
 
 //--3.2 drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
-console.log('3.2 drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`')
+console.log('3.2 drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`');
 console.log(car1.greeting('we drive with speed'));
 console.log(car2.greeting('we drive with speed'));
 console.log(car3.greeting('we drive with speed'));
@@ -135,14 +135,14 @@ car3.info();
 console.log('__________________________________________');
 
 //-3.4- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
-console.log('3.4- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed')
+console.log('3.4- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed');
 car1.increaseMaxSpeed(247);
 car2.increaseMaxSpeed(247);
 car3.increaseMaxSpeed(247);
 console.log('__________________________________________');
 
 //--3.5 changeYear (newValue) - змінює рік випуску на значення newValue
-console.log('3.5 changeYear (newValue) - змінює рік випуску на значення newValue')
+console.log('3.5 changeYear (newValue) - змінює рік випуску на значення newValue');
 car1.changeYear(2004)
 console.log('__________________________________________');
 
@@ -193,20 +193,20 @@ console.log(cars1)
 let car4 = new Car1 ('Agera', 'Koenigsegg', 2010, 433, 5 );
 let car5 = new Car1 ('Supra', 'Toyota', 2002, 266, 3 );
 //--4.2 drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
-console.log('4.2 drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`')
+console.log('4.2 drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`');
 console.log(car4.greeting('we drive with speed'));
 console.log(car5.greeting('we drive with speed'));
 console.log('________________________________________________');
 
 //--4.3 info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
-console.log('4.3 info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`')
+console.log('4.3 info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`');
 car4.info();
 car5.info();
 console.log('________________________________________________');
 
 
 //--4.4 increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
-console.log('4.4 increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed')
+console.log('4.4 increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed');
 car4.increaseMaxSpeed(320);
 car5.increaseMaxSpeed(320);
 console.log('________________________________________________');
@@ -214,7 +214,7 @@ console.log('________________________________________________');
 
 
 //--4.5 changeYear (newValue) - змінює рік випуску на значення newValue
-console.log('4.5 changeYear (newValue) - змінює рік випуску на значення newValue')
+console.log('4.5 changeYear (newValue) - змінює рік випуску на значення newValue');
 car4.changeYear(2011);
 car5.changeYear(1998);
 console.log('________________________________________________');
@@ -288,7 +288,7 @@ if (search){
         console.log('Cindirella is' + ' ' + (search.name));
     }
     else{
-        console.log('cinderella is not found')
+        console.log('cinderella is not found');
     }
 
 
