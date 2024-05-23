@@ -4,10 +4,13 @@
 - додати стилі(довільні значення) : колір фону, колір тексту, розмір тексту
 - додати цей блок в body.
 - клонувати його повністю, та додати клон в body.*/
-let div = document.getElementsByClassName('content')[0];
-let p = document.createElement('p')
-    p.innerText = 'Vpadlo prod';
-    div.appendChild(p)
+let div = document.createElement('div');
+    div.innerText = 'Vpadlo prod';
+    div.classList.add('block')
+let block = document.getElementsByClassName('content');
+let contentBlock = block[0];
+    contentBlock.append(div)
+    contentBlock.append(div.cloneNode(true));
 
 
 
@@ -107,12 +110,25 @@ let simpsons = [
     },
 ];
 
-/*for (const simpson of simpsons) {
-    document.write(`<div class="member">name: ${simpson.name}, surname: ${simpson.surname}, age: ${simpson.age}, info: ${simpson.info}, Photo: ${simpson.photo}</div>`)
-
+for (const simpson of simpsons) {
+    let div = document.getElementsByClassName('simpsonsInfo')[0];
+    let simpsonName = document.createElement('div');
+    let simpsonSurname = document.createElement('div');
+    let simpsonAge = document.createElement('div');
+    let simpsonInfo = document.createElement('div');
+    let simpsonPhoto = document.createElement('img');
+    simpsonName.innerText =`name: ${simpson.name}`
+    simpsonName.classList.add('simpsonBlocks');
+    simpsonSurname.innerText =`surname: ${simpson.surname}`
+    simpsonSurname.classList.add('simpsonBlocks');
+    simpsonAge.innerText =`age: ${simpson.age}`
+    simpsonAge.classList.add('simpsonBlocks');
+    simpsonInfo.innerText =`info: ${simpson.info}`
+    simpsonInfo.classList.add('simpsonBlocks');
+    simpsonPhoto.src = `${simpson.photo}`;
+   // simpsonPhoto.innerText =`name: ${simpson.name}, surname: ${simpson.surname}, age: ${simpson.age}, info: ${simpson.info}, Photo: ${simpson.photo}`
+    div.append(simpsonName, simpsonSurname, simpsonAge, simpsonInfo, simpsonPhoto);
 }
-*/
-
 
 
 /*=========================
@@ -129,32 +145,13 @@ let coursesArray = [
         title: 'Java Complex',
         monthDuration: 6,
         hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'java core',
-            'java advanced']
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'angular', 'aws', 'docker', 'git', 'java core', 'java advanced']
     },
     {
         title: 'Python Complex',
         monthDuration: 6,
         hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'python core',
-            'python advanced']
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'angular', 'aws', 'docker', 'python core', 'python advanced']
     },
     {
         title: 'QA Complex',
@@ -166,19 +163,7 @@ let coursesArray = [
         title: 'FullStack',
         monthDuration: 7,
         hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'react',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'node.js',
-            'python',
-            'java']
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js', 'python', 'java']
     },
     {
         title: 'Frontend',
@@ -187,6 +172,26 @@ let coursesArray = [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
+for (const course of coursesArray) {
+    let div = document.getElementsByClassName('coursesAndDirection')[0];
+    let title = document.createElement('div');
+    let monthDuration = document.createElement('div');
+    let hourDuration = document.createElement('div');
+    let modulesBlock = document.createElement('div');
+    title.innerText = `title: ${course.title}`
+    title.classList.add('title');
+    monthDuration.innerText = `monthDuration: ${course.monthDuration}`
+    monthDuration.classList.add('monthDuration');
+    hourDuration.innerText = `hourDuration: ${course.hourDuration}`
+    hourDuration.classList.add('hourDuration');
+    div.append(title, monthDuration, hourDuration, modulesBlock);
+    for (const module of course.modules) {
+        let modules = document.createElement('div');
+        modules.innerText = `${module}`
+        modules.classList.add('modules');
+        modulesBlock.append(modules);
+    }
+}
 
 
 

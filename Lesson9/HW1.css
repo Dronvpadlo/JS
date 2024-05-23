@@ -1,6 +1,6 @@
 .content{
     height: 100px;
-    width: 300px;
+    width: 100%;
     margin: 5px;
     background-color: #ee2d8e;
     font-size: 18px;
@@ -9,7 +9,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
+}
+.block{
+    margin-right: 2px;
+    width: 48%;
+    height: 90%;
+    background-color: #e37070;
 }
 .courses{
     height: 800px;
@@ -49,4 +54,55 @@
 }
 .list1{
     background-color: #e3d88b;
+}
+.simpsonsInfo{
+    background-color: #ffa15e;
+}
+.simpsonBlocks{
+    margin: 5px;
+    background-color: #f39d9d;
+}
+.coursesAndDirection{
+    margin: 0;
+    background-color: #b9f3e4;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.title{
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+    height: 10vh;
+    background-color: #c227e5;
+    width: 94vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.monthDuration{
+    height: 10vh;
+    width: 35vw;
+    background-color: #d063e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hourDuration{
+    margin-left: 1vw;
+    height: 10vh;
+    width: 58vw;
+    background-color: #d063e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modules{
+    margin: 1vh 1vw 1vh 1vw;
+    height: 10vh;
+    background-color: #da79ee;
+    width: 94vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
