@@ -1,0 +1,46 @@
+.result{
+    width: 50vw;
+    background-color: #d277e5;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2px;
+}
+#task2{
+    background-color: #e87be6;
+    width: 50vw;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#sessionsList{
+    background-color: #8e99f1;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#text{
+    width: 50vw;
+    height: 2vh;
+    background-color: #dee181;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2px;
+}
+#btn5{
+    width: 50vw;
+}
+.checkAge{
+    width: 50vw;
+    background-color: #b0eca5;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2px;
+}
+table, tr, td{
+    border: 1px solid;
+}

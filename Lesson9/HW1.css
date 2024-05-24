@@ -6,7 +6,7 @@
     font-size: 18px;
     color: #151212;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -15,6 +15,10 @@
     width: 48%;
     height: 90%;
     background-color: #e37070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .courses{
     height: 800px;
@@ -74,7 +78,7 @@
     margin-top: 3vh;
     margin-bottom: 1vh;
     height: 10vh;
-    background-color: #c227e5;
+    background-color: #c22de5;
     width: 94vw;
     display: flex;
     justify-content: center;
@@ -83,7 +87,7 @@
 .monthDuration{
     height: 10vh;
     width: 35vw;
-    background-color: #d063e7;
+    background-color: #d25fea;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +96,7 @@
     margin-left: 1vw;
     height: 10vh;
     width: 58vw;
-    background-color: #d063e7;
+    background-color: #d25fea;
     display: flex;
     justify-content: center;
     align-items: center;

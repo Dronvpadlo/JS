@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="HW1.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sessions</h1>
+    <div id="sessionsList"></div>
+
+<script>
+    let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
+    let sessionsList = document.getElementById('sessionsList');
+
+    sessions.forEach(function(session, index) {
+        let listItem = document.createElement('p');
+        listItem.textContent = 'Session ' + (index + 1) + ': ' + session;
+        sessionsList.appendChild(listItem);
+    });
+</script>
+</body>
+</html>
