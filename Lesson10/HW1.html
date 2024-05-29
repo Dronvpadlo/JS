@@ -4,16 +4,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="HW1.css">
     <title>Document</title>
 </head>
 <body>
+<section>
 <h3>Task 1</h3>
 <form action="#" name="form1">
-    <input type="text" placeholder="name" class="form1" name="username">
-    <input type="text" placeholder="surname" class="form1" name="surname">
-    <input type="number" placeholder="age" class="form1" name="age">
-    <button>Check</button>
+    <input type="text" placeholder="name" class="form1" name="username" required>
+    <input type="text" placeholder="surname" class="form1" name="surname" required>
+    <input type="number" placeholder="age" class="form1" name="age" required>
+    <button class="form1">Check</button>
     <div class="task1"></div>
 </form>
 
@@ -24,13 +28,14 @@
 
 
 <h3>Task 3</h3>
-
+<div id="task3"></div>
 
 
 <h3>Task 4</h3>
-<button>Next</button>
-<div id="task3"></div>
-<button>Prev</button>
+    <button onclick="prevPage()" class="btn4">Prev</button>
+    <div id="task4"></div>
+    <button onclick="nextPage()" class="btn4">Next</button>
+
 
 
 
@@ -49,17 +54,18 @@
 
 <h3>Task 7</h3>
 <form action="#" name="form7">
-    <input type="number" placeholder="numberOfLines" class="form6" name="numberOfLines">
-    <input type="number" placeholder="numberOfColumn" class="form6" name="numberOfColumn">
-    <input type="text" placeholder="content" class="form6" name="content">
+    <input type="number" placeholder="numberOfLines" class="form7" name="numberOfLines">
+    <input type="number" placeholder="numberOfColumn" class="form7" name="numberOfColumn">
+    <input type="text" placeholder="content" class="form7" name="content">
     <button id="btn7">CreateTable</button>
     <div id="task7"></div>
 </form>
 
 <h3>Task 8</h3>
+<div id="task8">100грн</div>
 
 
-
+</section>
 <script src="scripts/HW1.js">
 </script>
 </body>

@@ -10,7 +10,7 @@ let form1 = document.forms.form1;
         let age = this.age.value;
         result.innerText = `${username}, ${surname}, ${age}`;
         result.classList.add('result');
-        div.appendChild(result)
+        div.appendChild(result);
     };
 
 
@@ -25,12 +25,22 @@ let form1 = document.forms.form1;
      currentPageNumber = parseInt(currentPageNumber)+1;
  }
  localStorage.setItem('number', currentPageNumber);
-
- document.getElementById('task2').innerText=currentPageNumber;
+ document.getElementById('task2');
+     task2.innerText=currentPageNumber;
 
 /*==========================
-3. Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще, в масив sessions зберігається інформація про дату та час відвідування сторінки. Є ще сторінка sessions.html (назва довільна), при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль, а побудувати дом структуру під кожну сессію
-Код прописав в відповідних сторінках*/
+3. Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще, в масив sessions зберігається інформація про дату та час відвідування сторінки. Є ще сторінка sessions.html (назва довільна), при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль, а побудувати дом структуру під кожну сессію*/
+
+
+let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
+let sessionsList = document.getElementById('task3');
+
+sessions.forEach(function(session, index) {
+    let listItem = document.createElement('p');
+    listItem.textContent = 'Session ' + (index + 1) + ': ' + session;
+    sessionsList.appendChild(listItem);
+});
+//ще частина коду в Index.html, результат замість в Sessions вирішив виводити в основний файл ))
 
 
 /*
@@ -40,19 +50,47 @@ let form1 = document.forms.form1;
     При натисканні next виводяться настпні 10 об'єктів
 При натисканні prev виводяться попередні 10 об'єктів*/
 let arrOneHundredItems = [
-    {number: 'one'},{number: 'two'},{number: 'three'},{number: 'four'},{number: 'five'},{number: 'six'},{number: 'seven'},{number: 'eight'},{number: 'nine'},{number: 'zero'},
-    {number: 'one1'},{number: 'two1'},{number: 'three1'},{number: 'four1'},{number: 'five1'},{number: 'six1'},{number: 'seven1'},{number: 'eight1'},{number: 'nine1'},{number: 'zero1'},
-    {number: 'one2'},{number: 'two2'},{number: 'three2'},{number: 'four2'},{number: 'five2'},{number: 'six2'},{number: 'seven2'},{number: 'eight2'},{number: 'nine2'},{number: 'zero2'},
-    {number: 'one3'},{number: 'two3'},{number: 'three3'},{number: 'four3'},{number: 'five3'},{number: 'six3'},{number: 'seven3'},{number: 'eight3'},{number: 'nine3'},{number: 'zero3'},
-    {number: 'one4'},{number: 'two4'},{number: 'three4'},{number: 'four4'},{number: 'five4'},{number: 'six4'},{number: 'seven4'},{number: 'eight4'},{number: 'nine4'},{number: 'zero4'},
-    {number: 'one5'},{number: 'two5'},{number: 'three5'},{number: 'four5'},{number: 'five5'},{number: 'six5'},{number: 'seven5'},{number: 'eight5'},{number: 'nine5'},{number: 'zero5'},
-    {number: 'one6'},{number: 'two6'},{number: 'three6'},{number: 'four6'},{number: 'five6'},{number: 'six6'},{number: 'seven6'},{number: 'eight6'},{number: 'nine6'},{number: 'zero6'},
-    {number: 'one7'},{number: 'two7'},{number: 'three7'},{number: 'four7'},{number: 'five7'},{number: 'six7'},{number: 'seven7'},{number: 'eight7'},{number: 'nine7'},{number: 'zero7'},
-    {number: 'one8'},{number: 'two8'},{number: 'three8'},{number: 'four8'},{number: 'five8'},{number: 'six8'},{number: 'seven8'},{number: 'eight8'},{number: 'nine8'},{number: 'zero8'},
-    {number: 'one9'},{number: 'two9'},{number: 'three9'},{number: 'four9'},{number: 'five9'},{number: 'six9'},{number: 'seven9'},{number: 'eight9'},{number: 'nine9'},{number: 'zero9'}
+    {number: 'one'},{number: 'two'},{number: 'three'},{number: 'four'},{number: 'five'},{number: 'six'},{number: 'seven'},{number: 'eight'},{number: 'nine'},{number: 'ten'},
+    {number: 'eleven'},{number: 'twelve'},{number: 'thirteen'},{number: 'fourteen'},{number: 'fifteen'},{number: 'sixteen'},{number: 'seventeen'},{number: 'eighteen'},{number: 'nineteen'},{number: 'twenty'},
+    {number: 'twenty one'},{number: 'twenty two'},{number: 'twenty three'},{number: 'twenty four'},{number: 'twenty five'},{number: 'twenty six'},{number: 'twenty seven'},{number: 'twenty eight'},{number: 'twenty nine'},{number: 'thirty'},
+    {number: 'thirty one'},{number: 'thirty two'},{number: 'thirty three'},{number: 'thirty four'},{number: 'thirty five'},{number: 'thirty six'},{number: 'thirty seven'},{number: 'thirty eight'},{number: 'thirty nine'},{number: 'forty'},
+    {number: 'forty one'},{number: 'forty two'},{number: 'forty three'},{number: 'forty four'},{number: 'forty five'},{number: 'forty six'},{number: 'forty seven'},{number: 'forty eight'},{number: 'forty nine'},{number: 'fifty'},
+    {number: 'fifty one'},{number: 'fifty two'},{number: 'fifty three'},{number: 'fifty four'},{number: 'fifty five'},{number: 'fifty six'},{number: 'fifty seven'},{number: 'fifty eight'},{number: 'fifty nine'},{number: 'sixty'},
+    {number: 'sixty one'},{number: 'sixty two'},{number: 'sixty three'},{number: 'sixty four'},{number: 'sixty five'},{number: 'sixty six'},{number: 'sixty seven'},{number: 'sixty eight'},{number: 'sixty nine'},{number: 'seventy'},
+    {number: 'seventy one'},{number: 'seventy two'},{number: 'seventy three'},{number: 'seventy four'},{number: 'seventy five'},{number: 'seventy six'},{number: 'seventy seven'},{number: 'seventy eight'},{number: 'seventy nine'},{number: 'eighty'},
+    {number: 'eighty one'},{number: 'eighty two'},{number: 'eighty three'},{number: 'eighty four'},{number: 'eighty five'},{number: 'eighty six'},{number: 'eighty seven'},{number: 'eighty eight'},{number: 'eighty nine'},{number: 'ninety'},
+    {number: 'ninety one'},{number: 'ninety two'},{number: 'ninety three'},{number: 'ninety four'},{number: 'ninety five'},{number: 'ninety six'},{number: 'ninety seven'},{number: 'ninety eight'},{number: 'ninety nine'},{number: 'one hundred'}
 ];
-    let div = document.getElementsByClassName('task4')[0];
+    let itemsPerPage = 10;
+    let currentPage = 0;
 
+    function displayItems(){
+        let startIndex = currentPage * itemsPerPage;
+        let endIndex = startIndex + itemsPerPage;
+        let currentPageItems = arrOneHundredItems.slice(startIndex, endIndex);
+
+        document.getElementById('task4').innerText = '';
+
+        currentPageItems.forEach(arrOneHundredItems =>{
+            let itemElements = document.createElement('div');
+            itemElements.innerText = `${arrOneHundredItems.number}`;
+            itemElements.classList.add('task4El');
+            document.getElementById('task4').appendChild(itemElements);
+        });
+    }
+    document.addEventListener('DOMContentLoaded', () => displayItems());
+function nextPage(){
+    currentPage++
+    if(currentPage>= Math.ceil(arrOneHundredItems.length / itemsPerPage)){
+        currentPage = 0;
+    }
+    displayItems();
+}
+function prevPage(){
+    currentPage--
+    if(currentPage < 0) currentPage = Math.ceil(arrOneHundredItems.length / itemsPerPage) -1;
+    displayItems();
+    }
 
 
 
@@ -113,3 +151,18 @@ let form7 = document.forms.form7;
 при перезавантаженні сторінки до значаення додається по 10грн, але !!!
     зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.
     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд - нічого не відбувається*/
+document.addEventListener("DOMContentLoaded", function() {
+    // Отримуємо час останнього перезавантаження з localStorage
+    let lastReloadTime = localStorage.getItem("lastReloadTime");
+
+    // Якщо час останнього перезавантаження не був збережений або якщо минуло більше 10 секунд, то збільшуємо ціну
+    if (!lastReloadTime || (Date.now() - lastReloadTime > 10000)) {
+        let priceBlock = document.getElementById("task8");
+        let currentPrice = parseFloat(priceBlock.innerText);
+        let newPrice = currentPrice + 10;
+        priceBlock.innerText = newPrice.toFixed(2) + "грн";
+
+        // Зберігаємо час останнього перезавантаження
+        localStorage.setItem("lastReloadTime", Date.now());
+    }
+});

@@ -1,30 +1,70 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+section{
+    margin: 0;
+    width: 50.5vw;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+}    
+}
+.form1{
+    width: 12.4vw;
+}
 .result{
     width: 50vw;
-    background-color: #d277e5;
+    background-color: #fc86a5;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 2px;
 }
 #task2{
-    background-color: #e87be6;
+    background-color: #fc86d3;
     width: 50vw;
     margin: 2px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-#sessionsList{
-    background-color: #8e99f1;
+#task3{
+    background-color: #fc86f6;
+    width: 50vw;
     margin: 2px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+#task4{
+    margin: 2px;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+.task4El{
+    margin: 2px;
+    background-color: #e386fc;
+}
+.btn4{
+    width: 50vw;
 }
 #text{
     width: 50vw;
     height: 2vh;
-    background-color: #dee181;
+    background-color: #b586fc;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -33,14 +73,35 @@
 #btn5{
     width: 50vw;
 }
+.form6{
+    width: 35vw;
+}
+#btn6{
+    width: 15vw;
+}
 .checkAge{
     width: 50vw;
-    background-color: #b0eca5;
+    background-color: #9686fc;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 2px;
 }
+.form7, #btn7{
+    width: 12.4vw;
+}
+table{
+    width: 50vw;
+    background-color: #8e86fc;
+}
 table, tr, td{
     border: 1px solid;
+}
+#task8{
+    background-color: #86abfc;
+    width: 50vw;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
