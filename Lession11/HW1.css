@@ -1,0 +1,20 @@
+#carts{
+    width: 60vw;
+    background-color: #f58181;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartInfo{
+    margin-top: 3vh;
+    width: 50vw;
+    background-color: #f58181;
+}
+.cart{
+    margin-top: 1px;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5bb81;
+}
