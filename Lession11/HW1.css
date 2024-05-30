@@ -1,6 +1,30 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Jaini Purva", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+h3{
+    font-size: 48px;
+}
+a{
+    text-decoration: none;
+    color: #0a0a0a;
+}
+section{
+    background-color: #d2b1f5;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 #carts{
-    width: 60vw;
-    background-color: #f58181;
+    width: 100%;
+    background-color: #dfaff6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +32,7 @@
 .cartInfo{
     margin-top: 3vh;
     width: 50vw;
-    background-color: #f58181;
+    background-color: #dda4f1;
 }
 .cart{
     margin-top: 1px;
@@ -16,5 +40,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5bb81;
+    background-color: #efa8e4;
+}
+.recipeInfo{
+    background-color: #fcdc98;
+}
+
+.recipeName{
+    background-color: #fcc37d;
+    font-size: 32px;
+}
+.userInfo{
+    margin-top: 10px;
+    height: 35vh;
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #be8cfd;
+}
+.userInfo:hover{
+    border-radius: 50%;
+    transition: 2s;
 }
