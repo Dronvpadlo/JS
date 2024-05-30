@@ -60,7 +60,6 @@ fetch('https://dummyjson.com/recipes')
                 rating: ${recipe.rating}
                 servings: ${recipe.servings}`
 
-
             recipeImg.src = `${recipe.image}`
             for (const item of recipe.instructions){
                 let instruction = document.createElement('p');
@@ -76,7 +75,6 @@ fetch('https://dummyjson.com/recipes')
             recipesBlock.appendChild(recipeInfo);
         }
     });
-
 
 
 

@@ -58,7 +58,7 @@ section{
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    background-color: #be8cfd;
+    background-color: #be8afd;
 }
 .userInfo:hover{
     border-radius: 50%;
