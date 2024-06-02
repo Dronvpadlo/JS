@@ -3,6 +3,7 @@ let cartsBlock = document.getElementById('cartsBlock');
 fetch('https://dummyjson.com/carts')
     .then(res => res.json())
     .then(({carts}) =>{
+        console.log(carts)
         for (const cart of carts) {
             for (const item of cart.products) {
                 let cartInfo = document.createElement('div');
@@ -83,7 +84,7 @@ fetch('https://dummyjson.com/recipes')
 
 /*3. зробити файл users.html
 з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
-    вивести їх id + name списком та додати посилання з href = user-details.html?id=XXX (замість ХХХ - айді юзера)
+    вивести їх id + name списком та додати посилання з href = user-detail.html?id=XXX (замість ХХХ - айді юзера)
 при кліку на посилання перехід на відповідну сторінку, на якій буде вся інформація про користувача (всі 15 полів)
 отримана через додатковий запит (https://jsonplaceholder.typicode.com/users/XXX   де ХХХ - айді користувача)*/
 let usersBlock = document.getElementById('usersBlock');
@@ -99,7 +100,7 @@ fetch(getUsersUrl)
             let userName = document.createElement('li');
             let userHref = document.createElement('a');
             userList.classList.add('userInfo')
-            userHref.href = getUserById(user.id);
+            userHref.href = 'user-detail.html?id=' + user.id;
             userHref.innerText = getUsersUrl + `${user.id}`
             userId.innerText = `Id: ${user.id}`
             userName.innerText = `Name: ${user.name}`
@@ -107,3 +108,32 @@ fetch(getUsersUrl)
             usersBlock.appendChild(userList);
         }
     })
+let userDetailsContainer = document.getElementById('userDetails');
+const urlParams = new URLSearchParams(window.location.search);
+const userId = urlParams.get('id');
+
+fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+    .then((response) => response.json())
+    .then((user) => {
+        console.log(user)
+        let userInfo = document.createElement('div');
+        let userDetails = document.createElement('div');
+        let userAddress =  document.createElement('div');
+        let userCompany = document.createElement('div');
+        let userPosts = document.createElement('div')
+        userInfo.classList.add('userInfo')
+        userDetails.classList.add('userDetails')
+        userAddress.classList.add('userDetails')
+        userCompany.classList.add('userDetails')
+        userDetails.innerText = `ID: ${user.id}
+        Name: ${user.name}
+        Phone: ${user.phone}
+        Username: ${user.username}
+        Website: ${user.website}`
+        userAddress.innerText = `Address: City: ${user.address.city} Geo: ${user.address.geo.lat}, ${user.address.geo.lng} Street: ${user.address.street} Suite: ${user.address.suite} Zipcode: ${user.address.zipcode}`
+        userCompany.innerText =`Company: bs: ${user.company.bs} catchPhrase: ${user.company.catchPhrase} name: ${user.company.name}`
+        let postButtonClicked = false;
+        userInfo.append(userDetails, userAddress, userCompany);
+        userDetailsContainer.append(userInfo, userPosts)
+    });
+
